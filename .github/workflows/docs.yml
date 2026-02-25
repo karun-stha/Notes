@@ -11,10 +11,13 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -22,22 +25,13 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Zensical + show version
+      - name: Install Zensical
         run: |
           pip install --upgrade pip
           pip install zensical
-          zensical --version || echo "zensical not installed!"
 
-      - name: Verify docs folder contents
-        run: ls -la docs/ || echo "docs/ missing or empty!"
-
-      - name: Build site (clean)
+      - name: Build site
         run: zensical build --clean
-
-      - name: Debug: list built site/
-        run: |
-          ls -la site/ || echo "site/ not created!"
-          if [ -f site/index.html ]; then echo "index.html exists ✅"; else echo "index.html MISSING ❌"; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
