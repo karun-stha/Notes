@@ -1,13 +1,16 @@
 name: Documentation
+
 on:
   push:
     branches:
-      - master
       - main
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   deploy:
     environment:
@@ -15,15 +18,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v5
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v4   # use v4 consistently
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v4
+          python-version: '3.x'
+
+      - name: Install Zensical
+        run: |
+          pip install --upgrade pip
+          pip install zensical
+          zensical --version   # debug: confirm install
+
+      - name: Build site
+        run: zensical build --clean
+
+      - name: List built files (debug)
+        run: ls -la site/ || echo "Site folder missing!"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
