@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test/test.md",
+                "file": "XSS/XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "XSS"
             }
           }
         ],
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test/test.md",
+                "file": "XSS/XSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for test"
+              "title": "Backlinks for XSS"
             }
           },
           {
@@ -124,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test/test.md",
+                "file": "XSS/XSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from test"
+              "title": "Outgoing links from XSS"
             }
           },
           {
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test/test.md",
+                "file": "XSS/XSS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of test"
+              "title": "Outline of XSS"
             }
           }
         ]
@@ -197,10 +197,12 @@
   "active": "acd85f0d853e45f3",
   "lastOpenFiles": [
     "index.md",
+    "XSS/XSS.md",
+    "XSS",
+    "test/test.md",
     "docs/markdown.md",
     "docs/index.md",
     "docs",
-    "test/test.md",
     "test",
     "Welcome.md"
   ]
