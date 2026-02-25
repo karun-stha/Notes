@@ -1,9 +1,8 @@
-name: Documentation
+name: Deploy Zensical Docs
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -12,30 +11,33 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4   # use v4 consistently
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Install Zensical
+      - name: Install Zensical + show version
         run: |
           pip install --upgrade pip
           pip install zensical
-          zensical --version   # debug: confirm install
+          zensical --version || echo "zensical not installed!"
 
-      - name: Build site
+      - name: Verify docs folder contents
+        run: ls -la docs/ || echo "docs/ missing or empty!"
+
+      - name: Build site (clean)
         run: zensical build --clean
 
-      - name: List built files (debug)
-        run: ls -la site/ || echo "Site folder missing!"
+      - name: Debug: list built site/
+        run: |
+          ls -la site/ || echo "site/ not created!"
+          if [ -f site/index.html ]; then echo "index.html exists ✅"; else echo "index.html MISSING ❌"; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
