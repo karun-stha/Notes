@@ -11,18 +11,23 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Documentation"
+
+# Repo
+repo_url = "https://github.com/karun-stha/notes/"
+repo_name = "karun-stha/notes"
+
+site_name = "My Notes"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "This is where I share the things I’m learning, thinking about, and exploring — all in a clean and pretty format."
 
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "<your name here>"
+site_author = "Karun Shrestha"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
@@ -34,7 +39,7 @@ site_url = "https://karun-stha.github.io/notes/"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The authors
+Copyright &copy; 2026 Karun Shrestha
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -73,7 +78,7 @@ Copyright &copy; 2026 The authors
 [project.theme]
 
 # change this to "classic" to use the traditional Material for MkDocs look.
-#variant = "classic"
+variant = "classic"
 
 # Zensical allows you to override specific blocks, partials, or whole
 # templates as well as to define your own templates. To do this, uncomment
@@ -300,8 +305,47 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/karun-stha/notes"
 
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://twitter.com/karunstha859"
 
+# Plugins
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+clickable_checkbox = true
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.theme.icon.admonition]
+note = "octicons/tag-16"
+abstract = "octicons/checklist-16"
+info = "octicons/info-16"
+tip = "octicons/squirrel-16"
+success = "octicons/check-16"
+question = "octicons/question-16"
+warning = "octicons/alert-16"
+failure = "octicons/x-circle-16"
+danger = "octicons/zap-16"
+bug = "octicons/bug-16"
+example = "octicons/beaker-16"
+quote = "octicons/quote-16"
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.tilde]
