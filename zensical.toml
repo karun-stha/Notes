@@ -307,7 +307,15 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/karun-stha/notes"
+link = "https://github.com/karun-stha"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/karun-stha-646620327/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.com/users/1263336663363620988"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/x-twitter"
