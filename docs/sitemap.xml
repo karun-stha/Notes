@@ -4,9 +4,39 @@
         <loc>https://karun-stha.github.io/notes/</loc>
       </url>
       <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Broken%20Access%20Control/Broken%20Access%20Control/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Broken%20Authentication/Broken%20Authentication/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Business%20Logic/Business%20Logic/</loc>
+      </url>
+      <url>
         <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Command%20Injection/Command%20Injection/</loc>
       </url>
       <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Cross%20Site%20Scripting/Cross%20Site%20Scripting/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/File%20Inclusion/File%20Inclusion/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/JWT%20Attacks/JWT%20Attacks/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Mass%20Assignment/Mass%20Assignment/</loc>
+      </url>
+      <url>
         <loc>https://karun-stha.github.io/notes/Web%20Exploitation/SQL%20Injection/SQL%20Injection/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Server%20Side%20Request%20Forgery/Server%20Side%20Request%20Forgery/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/Server%20Side%20Template%20Injection/Server%20Side%20Template%20Injection/</loc>
+      </url>
+      <url>
+        <loc>https://karun-stha.github.io/notes/Web%20Exploitation/XXE%20Injection/XXE%20Injection/</loc>
       </url>
 </urlset>
